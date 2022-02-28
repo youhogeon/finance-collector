@@ -4,7 +4,6 @@ import com.youhogeon.finance.API.*;
 import com.youhogeon.finance.API.daishin.*;
 import com.youhogeon.finance.logger.*;
 import java.sql.*;
-import java.util.*;
 
 public class Collector {
     Logger logger;

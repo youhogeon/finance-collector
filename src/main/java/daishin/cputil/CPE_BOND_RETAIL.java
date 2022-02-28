@@ -1,6 +1,6 @@
 package daishin.cputil  ;
 
-import com4j.*;
+//import com4j.*;
 
 /**
  */

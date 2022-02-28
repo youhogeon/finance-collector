@@ -42,7 +42,7 @@ public class App{
             }
 
             try{
-                Collector c = new Collector(System.getProperty("apiid"), System.getProperty("apipw"), System.getProperty("certpw"), connection);
+                new Collector(System.getProperty("apiid"), System.getProperty("apipw"), System.getProperty("certpw"), connection);
                 connection.close();
             }catch (Exception e){
                 logger.log(500, "Something wrong while running system.", e.toString());
