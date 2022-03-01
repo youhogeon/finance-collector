@@ -36,7 +36,6 @@ public class InfoImpl implements Info {
     public void modeMin(){
         stockChart.setInputValue(1, 50);
         stockChart.setInputValue(2, 0);
-        //stockChart.setInputValue(2, 20200716);
         stockChart.setInputValue(3, 19971002);
         stockChart.setInputValue(6, 109);
         reset();

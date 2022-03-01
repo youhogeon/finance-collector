@@ -1,18 +1,3 @@
--- --------------------------------------------------------
--- 호스트:                          icou.kr
--- 서버 버전:                        10.5.8-MariaDB - mariadb.org binary distribution
--- 서버 OS:                        Win64
--- HeidiSQL 버전:                  11.3.0.6295
--- --------------------------------------------------------
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
-/*!50503 SET NAMES utf8mb4 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
--- 테이블 finance.logs 구조 내보내기
 CREATE TABLE IF NOT EXISTS `logs` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `code` int(10) unsigned NOT NULL DEFAULT 0,
@@ -22,9 +7,6 @@ CREATE TABLE IF NOT EXISTS `logs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6885 DEFAULT CHARSET=utf8;
 
--- 내보낼 데이터가 선택되어 있지 않습니다.
-
--- 테이블 finance.min_datas 구조 내보내기
 CREATE TABLE IF NOT EXISTS `min_datas` (
   `code` char(6) NOT NULL,
   `date` date NOT NULL,
@@ -1059,9 +1041,6 @@ CREATE TABLE IF NOT EXISTS `min_datas` (
  PARTITION `part1019` VALUES LESS THAN ('999999') ENGINE = InnoDB,
  PARTITION `part1020` VALUES LESS THAN (MAXVALUE) ENGINE = InnoDB);
 
--- 내보낼 데이터가 선택되어 있지 않습니다.
-
--- 테이블 finance.stocks 구조 내보내기
 CREATE TABLE IF NOT EXISTS `stocks` (
   `code` char(6) NOT NULL,
   `name` varchar(50) NOT NULL,
@@ -1069,9 +1048,13 @@ CREATE TABLE IF NOT EXISTS `stocks` (
   PRIMARY KEY (`code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 내보낼 데이터가 선택되어 있지 않습니다.
+INSERT INTO `stocks` (`code`, `name`, `updated_at`) VALUES
+	('069500', 'KODEX 200', '2022-03-01'),
+	('122630', 'KODEX 레버리지', '2022-03-01'),
+	('133690', 'TIGER 미국나스닥100', '2022-03-01'),
+	('229200', 'KODEX 코스닥 150', '2022-03-01'),
+	('233740', 'KODEX 코스닥150 레버리지', '2022-03-01'),
+	('409810', 'KODEX 미국나스닥100선물인버스(H)', '2022-03-01'),
+	('999001', 'KOSDAQ', '2022-03-01'),
+	('999002', 'KOSDAQ', '2022-03-01');
 
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
