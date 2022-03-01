@@ -19,7 +19,7 @@ public class Collector {
             logger.log("System initialized.");
             waiting();
         } catch(Exception e) {
-            logger.log(500, "Can not initialize system.\n\n1. Install cybos plus and login manually the first time.\n2. Check administrator privilege.");
+            logger.log(500, "Can not initialize system.\n\n1. Install cybos plus and login manually the first time.\n2. Check administrator privilege.\n3. Check your java version. Only JAVA 8 32bit is available.");
             return;
         }
 
